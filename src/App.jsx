@@ -11,6 +11,7 @@ import QrCodeGenerator from "./components/qr-code-generator/QrCodeGenerator";
 import LightDarkMode from "./components/light-dark-mode/LightDarkMode";
 import ScrollIndicator from "./components/scroll-indicator/ScrollIndicator";
 import TabTest from "./components/custom-tabs/TabTest";
+import ModalTest from "./components/custom-modal-popup/ModalTest";
 
 function App() {
   const navigate = useNavigate();
@@ -34,6 +35,7 @@ function App() {
           <option value="/light-dark-mode">Light Dark Mode</option>
           <option value="/scroll-indicator">Scroll Indicator</option>
           <option value="/custom-tabs">Custom Tabs</option>
+          <option value="/custom-modal-popup">Custom Modal Popup</option>
         </select>
       </nav>
 
@@ -62,6 +64,7 @@ function App() {
           }
         />
         <Route path="/custom-tabs" element={<TabTest />} />
+        <Route path="/custom-modal-popup" element={<ModalTest />} />
       </Routes>
     </>
   );
