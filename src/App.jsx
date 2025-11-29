@@ -1,4 +1,4 @@
-import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
 import Accordion from "./components/accordion/Accordion";
 import ColorGenerator from "./components/color-generator/ColorGenerator";
@@ -12,6 +12,7 @@ import LightDarkMode from "./components/light-dark-mode/LightDarkMode";
 import ScrollIndicator from "./components/scroll-indicator/ScrollIndicator";
 import TabTest from "./components/custom-tabs/TabTest";
 import ModalTest from "./components/custom-modal-popup/ModalTest";
+import GithubProfileFinder from "./components/github-profile-finder/GithubProfileFinder";
 
 function App() {
   const navigate = useNavigate();
@@ -36,6 +37,7 @@ function App() {
           <option value="/scroll-indicator">Scroll Indicator</option>
           <option value="/custom-tabs">Custom Tabs</option>
           <option value="/custom-modal-popup">Custom Modal Popup</option>
+          <option value="/github-profile-finder">Github Profile Finder</option>
         </select>
       </nav>
 
@@ -65,6 +67,10 @@ function App() {
         />
         <Route path="/custom-tabs" element={<TabTest />} />
         <Route path="/custom-modal-popup" element={<ModalTest />} />
+        <Route
+          path="/github-profile-finder"
+          element={<GithubProfileFinder />}
+        />
       </Routes>
     </>
   );
