@@ -18,6 +18,7 @@ import TicTacToe from "./components/tic-tac-toe/TicTacToe";
 import FeatureFlag from "./components/feature-flag/FeatureFlag";
 import FeatureFlagsProvider from "./components/feature-flag/context/FeatureFlagsProvider";
 import UseFetchHookTest from "./components/use-fetch/UseFetchHookTest";
+import UseOutsideClickHookTest from "./components/use-outside-click/UseOutsideClickHookTest";
 
 function App() {
   const navigate = useNavigate();
@@ -49,6 +50,7 @@ function App() {
           <option value="/tic-tac-toe">Tic Tac Toe</option>
           <option value="/feature-flag">Feature Flag</option>
           <option value="/use-fetch">Use Fetch</option>
+          <option value="/use-outside-click">Use Outside Click</option>
         </select>
       </nav>
 
@@ -96,6 +98,10 @@ function App() {
           }
         ></Route>
         <Route path="/use-fetch" element={<UseFetchHookTest />} />
+        <Route
+          path="/use-outside-click"
+          element={<UseOutsideClickHookTest />}
+        />
       </Routes>
     </>
   );
