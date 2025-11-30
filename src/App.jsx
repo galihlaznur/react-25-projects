@@ -16,7 +16,8 @@ import GithubProfileFinder from "./components/github-profile-finder/GithubProfil
 import SearchAutocomplete from "./components/search-autocomplete-with-api/SearchAutocomplete";
 import TicTacToe from "./components/tic-tac-toe/TicTacToe";
 import FeatureFlag from "./components/feature-flag/FeatureFlag";
-import FeatureFlagProvider from "./components/feature-flag/context/FeatureFlagsProvider";
+import FeatureFlagsProvider from "./components/feature-flag/context/FeatureFlagsProvider";
+import UseFetchHookTest from "./components/use-fetch/UseFetchHookTest";
 
 function App() {
   const navigate = useNavigate();
@@ -47,6 +48,7 @@ function App() {
           </option>
           <option value="/tic-tac-toe">Tic Tac Toe</option>
           <option value="/feature-flag">Feature Flag</option>
+          <option value="/use-fetch">Use Fetch</option>
         </select>
       </nav>
 
@@ -88,11 +90,12 @@ function App() {
         <Route
           path="/feature-flag"
           element={
-            <FeatureFlagProvider>
+            <FeatureFlagsProvider>
               <FeatureFlag />
-            </FeatureFlagProvider>
+            </FeatureFlagsProvider>
           }
         ></Route>
+        <Route path="/use-fetch" element={<UseFetchHookTest />} />
       </Routes>
     </>
   );

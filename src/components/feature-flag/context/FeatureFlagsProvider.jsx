@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import FeatureFlagData from "../data";
 import FeatureFlagsContext from "./FeatureFlagsContext";
 
-export default function FeatureFlagProvider({ children }) {
+export default function FeatureFlagsProvider({ children }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [flags, setFlags] = useState({});
